@@ -18,6 +18,8 @@
     .intro{color:#c7c5bf;font-size:14px;line-height:1.6;margin:20px 0 25px}
     nav{display:grid;gap:12px}
     .link{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding:18px 20px;border:1px solid var(--gold);border-radius:12px;background:var(--paper);color:#24211b;text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;text-align:left;transition:background .18s,transform .18s}
+    .link{display:grid;grid-template-columns:20px minmax(0,1fr) 20px;text-align:center}
+    .link::before{content:""}
     .link>span:last-child{color:#796038;font-size:20px;font-weight:400}
     .link:hover{background:#eee0c4;transform:translateY(-2px)}
     .link:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
@@ -48,4 +50,3 @@
   </main>
 </body>
 </html>
-
