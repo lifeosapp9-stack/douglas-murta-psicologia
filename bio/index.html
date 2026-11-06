@@ -8,43 +8,60 @@
   <title>Douglas Murta | Psicólogo — Links</title>
   <link rel="canonical" href="https://douglas-murta-psicologia.onrender.com/bio">
   <style>
-    :root{color-scheme:dark;--gold:#d5b779;--ink:#111211;--paper:#faf6ee}
+    :root{color-scheme:dark;--gold:#d9be89;--ink:#101211;--paper:#f5f0e6}
     *{box-sizing:border-box}
-    body{margin:0;background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
-    main{width:min(100% - 40px,480px);margin:0 auto;padding:40px 0 28px;text-align:center}
-    .portrait{width:154px;height:154px;display:block;margin:0 auto 22px;border-radius:50%;border:2px solid var(--gold);padding:5px;object-fit:contain}
-    h1{font-family:Georgia,'Times New Roman',serif;font-size:36px;font-weight:400;letter-spacing:-.03em;margin:0 0 9px}
-    .identity{margin:0;color:var(--gold);font-size:14px;letter-spacing:.05em;line-height:1.6}
-    .intro{color:#c7c5bf;font-size:14px;line-height:1.6;margin:20px 0 25px}
-    nav{display:grid;gap:12px}
-    .link{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding:18px 20px;border:1px solid var(--gold);border-radius:12px;background:var(--paper);color:#24211b;text-decoration:none;font-size:15px;font-weight:600;line-height:1.4;text-align:left;transition:background .18s,transform .18s}
-    .link{display:grid;grid-template-columns:20px minmax(0,1fr) 20px;text-align:center}
-    .link::before{content:""}
-    .link>span:last-child{color:#796038;font-size:20px;font-weight:400}
-    .link:hover{background:#eee0c4;transform:translateY(-2px)}
-    .link:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-    .site{background:transparent;color:var(--gold)}
-    .site:hover{background:#29251d}
-    .site>span:last-child{color:var(--gold)}
-    footer{color:#aaa79f;font-size:11px;line-height:1.7;margin-top:28px}
-    @media(max-width:360px){main{width:calc(100% - 28px);padding-top:28px}h1{font-size:32px}.link{font-size:14px;padding:16px}}
-    @media(prefers-reduced-motion:reduce){.link{transition:none}.link:hover{transform:none}}
+    html{min-height:100%;background:var(--ink)}
+    body{margin:0;min-height:100vh;color:var(--paper);font-family:'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 12% 9%,#ac824325,transparent 45%),radial-gradient(ellipse at 93% 72%,#a07d371a,transparent 42%),linear-gradient(130deg,#1b1d19,#101211 55%,#1c1b16);isolation:isolate}
+    .backdrop{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+    .backdrop::before{content:'';position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23ffffff' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+    .backdrop span{position:absolute;width:680px;height:1050px;border:1px solid #d9be8919;border-radius:50%;transform:rotate(32deg);top:-390px;left:calc(50% - 790px);box-shadow:0 0 0 32px #d9be8905,0 0 0 64px #d9be8905}
+    .backdrop span:last-child{top:auto;bottom:-480px;left:calc(50% + 180px);transform:rotate(32deg)}
+    main{width:min(100% - 40px,460px);margin:auto;padding:38px 0 26px;text-align:center}
+    header{position:relative}
+    .eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 25px;color:#d2bd95;font-size:9px;letter-spacing:.3em;text-transform:uppercase}
+    .eyebrow::before,.eyebrow::after{content:'';width:30px;height:1px;background:linear-gradient(90deg,transparent,#ad8b50)}
+    .eyebrow::after{transform:rotate(180deg)}
+    .portrait-frame{width:150px;height:150px;padding:7px;margin:0 auto 20px;border-radius:50%;position:relative;background:linear-gradient(145deg,#ead5a4,#8d6c32 45%,#302a1c 65%,#c9a569);box-shadow:0 12px 40px #0006}
+    .portrait-frame::after{content:'';position:absolute;inset:-5px;border:1px solid #d9be8938;border-radius:50%}
+    .portrait{width:100%;height:100%;display:block;border-radius:50%;object-fit:contain;border:3px solid #171916}
+    h1{font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.15;font-weight:400;letter-spacing:-.035em;margin:0 0 10px;color:#f6efe1}
+    .identity{margin:0;color:var(--gold);font-size:11px;letter-spacing:.16em;line-height:1.7;text-transform:uppercase}
+    .intro{color:#bcbdb3;font-size:13px;line-height:1.6;margin:19px 0 25px;font-weight:400}
+    nav{display:grid;gap:11px}
+    .link{position:relative;display:grid;grid-template-columns:30px minmax(0,1fr) 30px;align-items:center;gap:9px;min-height:68px;padding:15px 16px;border:1px solid #c4a36359;border-radius:16px;background:linear-gradient(120deg,#30332b,#22251f 65%,#2d2e24);box-shadow:inset 0 1px 0 #fff1,0 6px 18px #0002;color:#f2ecdf;text-decoration:none;font-size:14px;font-weight:500;line-height:1.4;text-align:center;transition:transform .22s,border-color .22s,box-shadow .22s,background .22s}
+    .link>svg{width:21px;height:21px;justify-self:center;color:#d4ba88;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+    .link>span:last-child{display:grid;place-items:center;width:28px;height:28px;border:1px solid #d9be8926;border-radius:50%;color:#d4ba88;font-size:17px;font-weight:400;transition:transform .22s}
+    .link:nth-child(-n+2){background:linear-gradient(115deg,#f0dfba,#d6bb85 60%,#c5a166);color:#25251e;border-color:#e0c996;box-shadow:inset 0 1px 0 #fff9,0 6px 20px #0003;font-weight:600}
+    .link:nth-child(-n+2)>svg,.link:nth-child(-n+2)>span:last-child{color:#58482c}
+    .link:nth-child(-n+2)>span:last-child{border-color:#6a522530}
+    .link:hover{transform:translateY(-2px);border-color:#eed5a0;box-shadow:inset 0 1px 0 #fff2,0 12px 24px #0005}
+    .link:hover>span:last-child{transform:rotate(7deg)}
+    .link:active{transform:translateY(0)}
+    .link:focus-visible{outline:2px solid #f3d99e;outline-offset:4px}
+    .site{min-height:58px;background:#14161270;border-color:#d9be8930;color:#d9c8a6}
+    footer{color:#a6a79b;font-size:10px;letter-spacing:.05em;line-height:1.8;margin-top:26px}
+    footer::before{content:'';display:block;height:1px;width:44px;background:#c6a66570;margin:0 auto 14px}
+    @media(min-width:800px){main{padding-top:48px}.backdrop::after{content:'';position:absolute;inset:24px;border:1px solid #d9be8914;border-radius:4px}}
+    @media(max-width:360px){main{width:calc(100% - 28px);padding-top:28px}h1{font-size:36px}.link{font-size:13px;padding:14px 10px;gap:5px}.eyebrow{letter-spacing:.22em}}
+    @media(prefers-reduced-motion:reduce){.link,.link>span:last-child{transition:none}.link:hover,.link:hover>span:last-child{transform:none}}
   </style>
 </head>
 <body>
+  <div class="backdrop" aria-hidden="true"><span></span><span></span></div>
   <main>
     <header>
-      <img class="portrait" src="/bio/douglas-murta.png" alt="Douglas Murta, psicólogo" width="154" height="154">
+      <p class="eyebrow">Psicologia &amp; cuidado</p>
+      <div class="portrait-frame"><img class="portrait" src="/bio/douglas-murta.png" alt="Douglas Murta, psicólogo" width="154" height="154"></div>
       <h1>Douglas Murta</h1>
       <p class="identity">Psicólogo · CRP 04/53556</p>
       <p class="intro">Escolha o atendimento e fale comigo.</p>
     </header>
     <nav aria-label="Atendimentos e site">
-      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20agendar%20uma%20consulta%20presencial.%20Poderia%20me%20informar%20a%20disponibilidade%20e%20as%20cidades%20de%20atendimento%3F" target="_blank" rel="noopener noreferrer"><span>Agende sua consulta presencial</span><span aria-hidden="true">↗</span></a>
-      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20agendar%20uma%20consulta%20on-line.%20Poderia%20me%20informar%20a%20disponibilidade%3F" target="_blank" rel="noopener noreferrer"><span>Agende sua consulta on-line</span><span aria-hidden="true">↗</span></a>
-      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20de%20Psicodiagn%C3%B3stico." target="_blank" rel="noopener noreferrer"><span>Psicodiagnóstico</span><span aria-hidden="true">↗</span></a>
-      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20de%20Psicologia%20e%20Sa%C3%BAde%20Financeira." target="_blank" rel="noopener noreferrer"><span>Psicologia e Saúde Financeira</span><span aria-hidden="true">↗</span></a>
-      <a class="link site" href="https://douglas-murta-psicologia.onrender.com/"><span>Site</span><span aria-hidden="true">↗</span></a>
+      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20agendar%20uma%20consulta%20presencial.%20Poderia%20me%20informar%20a%20disponibilidade%20e%20as%20cidades%20de%20atendimento%3F" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Agende sua consulta presencial</span><span aria-hidden="true">↗</span></a>
+      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20agendar%20uma%20consulta%20on-line.%20Poderia%20me%20informar%20a%20disponibilidade%3F" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg><span>Agende sua consulta on-line</span><span aria-hidden="true">↗</span></a>
+      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20de%20Psicodiagn%C3%B3stico." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m8 13 2 2 5-5M8 18h8"/></svg><span>Psicodiagnóstico</span><span aria-hidden="true">↗</span></a>
+      <a class="link" href="https://wa.me/5531983406386?text=Ol%C3%A1%2C%20Douglas!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20atendimento%20de%20Psicologia%20e%20Sa%C3%BAde%20Financeira." target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6.5-8 11-8 11Z"/><path d="M7 12h3l2-3 2 6 2-3h2"/></svg><span>Psicologia e Saúde Financeira</span><span aria-hidden="true">↗</span></a>
+      <a class="link site" href="https://douglas-murta-psicologia.onrender.com/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>Site</span><span aria-hidden="true">↗</span></a>
     </nav>
     <footer>Atendimento presencial e on-line<br>Douglas Murta · Psicólogo · CRP 04/53556</footer>
   </main>
